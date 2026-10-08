@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+build/
+.kotlin/
+
+# IntelliJ Platform Gradle Plugin caches and sandbox
+.intellijPlatform/
+
+# IDE
+.idea/
+*.iml
+out/
+
+# OS
+.DS_Store

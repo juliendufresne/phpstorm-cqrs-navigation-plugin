@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>me.dfrsn.cqrs-navigation</id>
+    <name>PHP CQRS Navigation</name>
+    <vendor>dfrsn</vendor>
+    <description><![CDATA[
+        Navigate between Symfony Messenger messages and their handlers, and between EventDispatcher events and their
+        listeners and subscribers.
+        <ul>
+            <li>Gutter icon on a command or event class, and on <code>new Command(...)</code>: go to its handlers.</li>
+            <li>Gutter icon on a handler or listener method: go back to the message it handles.</li>
+            <li>The same targets are available from Navigate &gt; Related Symbol.</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <codeInsight.lineMarkerProvider language="PHP"
+                                        implementationClass="me.dfrsn.cqrsnav.MessageHandlerLineMarkerProvider"/>
+    </extensions>
+</idea-plugin>
